@@ -1,0 +1,9 @@
+table {
+    width: 1000px;
+    background-color: #3D195B;
+}
+
+.container{
+  overflow: auto;
+  height: 400px;
+}

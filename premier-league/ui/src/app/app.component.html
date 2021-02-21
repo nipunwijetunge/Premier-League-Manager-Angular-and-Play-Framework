@@ -1,0 +1,35 @@
+
+<!-- <app-home></app-home> -->
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+   <button mat-raised-button class="menu-buttons" [routerLink]='[{outlets: {outlet: ["home"]}}]'>
+     HOME
+   </button>
+   <button mat-raised-button class="menu-buttons" [routerLink]='[{outlets: {outlet: ["pointTable"]}}]'>
+     POINT TABLE
+   </button>
+   <button mat-raised-button class="menu-buttons" [routerLink]='[{outlets: {outlet: ["random"]}}]'>
+     GENERATE RANDOM MATCH
+   </button>
+   <button mat-raised-button class="menu-buttons" [routerLink]='[{outlets: {outlet: ["allMatches"]}}]'>
+     PLAYED MATCHES LIST
+   </button>
+   <button mat-raised-button class="menu-buttons" [routerLink]='[{outlets: {outlet: ["allMatches"]}}]'>
+     SEARCH MATCHES
+   </button>
+
+   <p style="position: absolute; bottom: 3%; left: 39%;">#w1761260</p>
+ </mat-drawer>
+
+  <div class="example-sidenav-content">
+
+    <router-outlet name="outlet"></router-outlet>
+
+    <button color="primary" type="button" mat-button (click)="drawer.toggle()" mat-raised-button style="position: fixed; right: 5%; top: 5%;">
+     OPEN MENU
+    </button>
+
+  </div>
+
+</mat-drawer-container>

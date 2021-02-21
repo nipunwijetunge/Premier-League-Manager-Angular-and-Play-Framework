@@ -1,0 +1,10 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /listOfClubs                  controllers.HomeController.sendClubList()
+GET     /listOfMatches                controllers.HomeController.sendMatchList()
+GET     /randomMatch                  controllers.HomeController.randomMatchGenerator()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
